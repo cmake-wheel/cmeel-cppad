@@ -13,5 +13,6 @@ repository = "https://github.com/cmake-wheel/cmeel-cppad.git"
 [build-system]
 requires = ["cmeel[build]"]
 build-backend = "cmeel.build"
+build-number = 1
 source = "CppAD"
 run-tests = false
