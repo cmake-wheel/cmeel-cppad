@@ -1,19 +1,23 @@
 macos_arm64_task:
   name: Build macOS arm64 wheels.
-  only_if: $CIRRUS_TAG =~ '*'
+  only_if: $CIRRUS_TAG =~ 'v.*' && $CIRRUS_REPO_OWNER == 'cmake-wheel'
+  environment:
+    TWINE_PASSWORD: ENCRYPTED[018e89c65144c4660cd505155b81584493d4244414e55e88e3e7a3de561621d3a0be73ec9a1c1fd902276afd7289fb8a]
   macos_instance:
     image: ghcr.io/cirruslabs/macos-monterey-xcode
   env:
-    CIBW_REPAIR_WHEEL_COMMAND: ""
     CIRRUS_CLONE_SUBMODULES: true
+    CIBW_REPAIR_WHEEL_COMMAND: ""
     PATH: /opt/homebrew/opt/python@3.10/bin:$PATH
   install_pre_requirements_script:
     - brew install python@3.10
     - ln -s python3 /opt/homebrew/opt/python@3.10/bin/python
   install_cibuildwheel_script:
     - python -m pip install -U pip
-    - python -m pip install cibuildwheel
+    - python -m pip install cibuildwheel twine
   run_cibuildwheel_script:
     - cibuildwheel
+  publish_script:
+    - python -m twine upload -u __token__ wheelhouse/cmeel_example*.whl
   wheels_artifacts:
     path: "wheelhouse/*"
