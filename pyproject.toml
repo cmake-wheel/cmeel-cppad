@@ -10,7 +10,7 @@ homepage = "https://github.com/cmake-wheel/cmeel-cppad"
 repository = "https://github.com/cmake-wheel/cmeel-cppad.git"
 
 [tool.cmeel]
-build-number = 5
+build-number = 6
 source = "CppAD"
 run-tests = false
 
