@@ -16,3 +16,4 @@ repository = "https://github.com/cmake-wheel/cmeel-cppad.git"
 [tool.cmeel]
 source = "CppAD"
 run-tests = false
+py3-none = true
