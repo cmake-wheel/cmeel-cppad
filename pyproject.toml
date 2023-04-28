@@ -1,19 +1,22 @@
 [build-system]
-requires = ["cmeel[build]"]
 build-backend = "cmeel.build"
+requires = ["cmeel[build]"]
 
 [project]
-name = "cmeel-cppad"
-version = "20230000.0"
 description = "cmeel distribution for CppAD, A C++ Algorithmic Differentiation Package"
-requires-python = ">= 3.7"
 license = "EPL-2.0"
+name = "cmeel-cppad"
+requires-python = ">= 3.7"
+version = "20230000.0"
 
 [project.urls]
 homepage = "https://github.com/cmake-wheel/cmeel-cppad"
 repository = "https://github.com/cmake-wheel/cmeel-cppad.git"
 
 [tool.cmeel]
-source = "CppAD"
-run-tests = false
 py3-none = true
+run-tests = false
+source = "CppAD"
+
+[tool.tomlsort]
+all = true
