@@ -1,12 +1,12 @@
 [build-system]
-build-backend = "cmeel.build"
+build-backend = "cmeel"
 requires = ["cmeel[build]"]
 
 [project]
 description = "cmeel distribution for CppAD, A C++ Algorithmic Differentiation Package"
 license = "EPL-2.0"
 name = "cmeel-cppad"
-requires-python = ">= 3.7"
+requires-python = ">= 3.8"
 version = "20230000.0"
 
 [project.urls]
