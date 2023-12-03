@@ -12,6 +12,7 @@ version = "20230000.0"
 [project.urls]
 homepage = "https://github.com/cmake-wheel/cmeel-cppad"
 repository = "https://github.com/cmake-wheel/cmeel-cppad.git"
+upstream = "https://github.com/coin-or/CppAD"
 
 [tool.cmeel]
 build-number = 4
