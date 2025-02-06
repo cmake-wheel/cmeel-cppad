@@ -7,7 +7,7 @@ description = "cmeel distribution for CppAD, A C++ Algorithmic Differentiation P
 license = "EPL-2.0"
 name = "cmeel-cppad"
 requires-python = ">= 3.8"
-version = "20230000.0"
+version = "20250000.2"
 
 [project.urls]
 homepage = "https://github.com/cmake-wheel/cmeel-cppad"
@@ -15,7 +15,6 @@ repository = "https://github.com/cmake-wheel/cmeel-cppad.git"
 upstream = "https://github.com/coin-or/CppAD"
 
 [tool.cmeel]
-build-number = 4
 has-sitelib = false
 run-tests = false
 source = "CppAD"
